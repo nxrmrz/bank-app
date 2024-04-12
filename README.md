@@ -24,7 +24,7 @@ To run this app:
 To run tests:
 - We use the `unittest` module for this app
 - Run `python3 -m unittest discover tests` inside root to run all of the tests in the `tests/` folder
-- Run `python3 -m unittest test.test_bank_entities.py` to run a specific test file
+- Run `python3 -m unittest test.test_bank_entities` to run a specific test file
 
 ## 3. Design and Analysis
 
