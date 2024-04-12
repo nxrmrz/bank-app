@@ -8,8 +8,9 @@ The repository structure and brief description is as follows:
 
 ```
 bank_app 
-    |--src: folder containing files representing a bank and its entities
-    |--tests: tests against the src folder, with each test file having an equivalent file in src/
+    |--src: contains files representing a bank and its entities
+    |--static: contains static files supporting the app/readme
+    |--tests: tests against src/, with each test file having an equivalent file in src/
 app.py: entrypoint into the app, shows a bank running, including a test scenario
 README.md 
 ```
