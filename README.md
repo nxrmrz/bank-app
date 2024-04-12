@@ -22,7 +22,7 @@ To run this app:
 2. Run `python3 app.py` inside the root directory
 
 To run tests:
-- We use the `unittest` module for this app
+- We use the [`unittest`](https://docs.python.org/3/library/unittest.html) module for this app
 - Run `python3 -m unittest discover tests` inside root to run all of the tests in the `tests/` folder
 - Run `python3 -m unittest test.test_bank_entities` to run a specific test file
 
@@ -41,7 +41,7 @@ I heavily use composition: a bank composes of customers, who then own accounts, 
 
 I then encapsulate information to protect it. For example, an account instance encapsulates its number, balance and transactions. A customer instance encapsulates its list of accounts. Most variables are private and where mutable, have getters and setters so we can extend to perform additional validation (i did minimal input validation where relevant via `assert()` methods here), or authentication checks, or apply more business logic in the future (i.e. adding interest in certain accounts). I would also have invested more time into Exception raising/handling in a mature application.
 
-Each class is constructed with as much of the SOLID principles in mind, so that they can subclassed to their specific entities, or made to be an interface, depending on the requirement. In a future scenario, where the factory pattern applies for example, we'd have:
+Each class is constructed with as much of the SOLID OOP principles in mind, so that they can subclassed to their specific entities, or made to be an interface, depending on the requirement. In a future scenario, where the factory pattern applies for example, we'd have:
 - `Bank` can have certain bank branches
 - `Customer` can be a `ChildCustomer`, `AdultCustomer`, `BusinessCustomer`, etc
 - `Account` can be `SavingsAccount`, `CheckingAccount`, etc
@@ -52,6 +52,6 @@ A sidenote on the file/folder structure, as the number of entities in our bank b
 
 #### 3.2 The Tests
 
-I use `unittests` to write our tests, with each class in `src/` having its equivalent test class in  `tests/`. `unittests` is a test runner that allows you to either run global or specific test files. 
+I use [`unittests`](https://docs.python.org/3/library/unittest.html) to write our tests, with each class in `src/` having its equivalent test class in  `tests/`. `unittests` is a test runner that allows you to either run global or specific test files. 
 
 A tradeoff I made given time constraints is I wrote mostly positive unit tests per function (that isn't a property or an internal python function). These test the desired behaviour of each capability, and test for only one input type. Time-permitting, I'd test for multiple input types and include negative tests, boundary tests, exception unit tests and integration tests.
